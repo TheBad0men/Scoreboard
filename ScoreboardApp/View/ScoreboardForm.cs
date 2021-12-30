@@ -19,36 +19,35 @@ namespace View
         {
             InitializeComponent();
 
-            Label label = new Label() { Text = "Players: Score", };
-            table.Controls.Add(label, 0, 0);
+            Size = new Size(350, 500);
+
+            
 
         }
 
-
+        private bool firstRow = true;
+        private int numRows = 0;
 
         private void AddPlayerRow(string newPlayerName)
         {
             players[newPlayerName] = 0;
-            RowStyle newRow = new RowStyle(SizeType.Percent);
-            newRow.SizeType = SizeType.Percent;
+            Label label;
             
-
-            table.RowStyles.Add(newRow);
-            Label newPlayerInfo = new Label() { Text = newPlayerName + ": 0"};
-
-            table.Controls.Add(newPlayerInfo);
-
-            ResizeRows();
-
-        }
-
-        private void ResizeRows()
-        {
-            foreach (RowStyle row in table.RowStyles)
+            if (firstRow)
             {
-                row.Height = 100f / table.RowCount;
+                label = new Label() { Location = new Point(115, 100), Text = newPlayerName + ": 0", };
+                firstRow = false;
             }
+            else
+            {
+                label = new Label() { Location = new Point(115, 25 * numRows + 100), Text = newPlayerName + ": 0", };
+            }
+
+            Controls.Add(label);
+
+            numRows++;
         }
+
 
         private void addPlayerToolStripMenuItem_Click(object sender, EventArgs e)
         {

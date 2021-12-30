@@ -29,30 +29,13 @@ namespace View
         /// </summary>
         private void InitializeComponent()
         {
-            this.table = new System.Windows.Forms.TableLayoutPanel();
             this.menu = new System.Windows.Forms.MenuStrip();
             this.playersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addPlayerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removePlayerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.labelHeader = new System.Windows.Forms.Label();
             this.menu.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // table
-            // 
-            this.table.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.table.AutoScroll = true;
-            this.table.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.table.ColumnCount = 1;
-            this.table.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.table.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.table.Location = new System.Drawing.Point(0, 28);
-            this.table.Name = "table";
-            this.table.RowCount = 1;
-            this.table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.table.Size = new System.Drawing.Size(307, 379);
-            this.table.TabIndex = 0;
             // 
             // menu
             // 
@@ -87,13 +70,23 @@ namespace View
             this.removePlayerToolStripMenuItem.Size = new System.Drawing.Size(190, 26);
             this.removePlayerToolStripMenuItem.Text = "Remove Player";
             // 
+            // labelHeader
+            // 
+            this.labelHeader.AutoSize = true;
+            this.labelHeader.Font = new System.Drawing.Font("Segoe UI", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.labelHeader.Location = new System.Drawing.Point(75, 38);
+            this.labelHeader.Name = "labelHeader";
+            this.labelHeader.Size = new System.Drawing.Size(152, 31);
+            this.labelHeader.TabIndex = 2;
+            this.labelHeader.Text = "Player: Score";
+            // 
             // ScoreboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(307, 407);
-            this.Controls.Add(this.table);
+            this.Controls.Add(this.labelHeader);
             this.Controls.Add(this.menu);
             this.Name = "ScoreboardForm";
             this.Text = "Scoreboard";
@@ -105,12 +98,11 @@ namespace View
         }
 
         #endregion
-
-        private System.Windows.Forms.TableLayoutPanel table;
         private System.Windows.Forms.MenuStrip menu;
         private System.Windows.Forms.ToolStripMenuItem playersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addPlayerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem removePlayerToolStripMenuItem;
+        private System.Windows.Forms.Label labelHeader;
     }
 }
 
