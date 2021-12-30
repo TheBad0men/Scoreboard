@@ -19,10 +19,8 @@ namespace View
         {
             InitializeComponent();
 
-            Label playersCol = new Label() { Text = "Players", };
-            Label scoreCol = new Label() { Text = "Score", };
-            table.Controls.Add(playersCol, 0, 0);
-            table.Controls.Add(scoreCol, 1, 0);
+            Label label = new Label() { Text = "Players: Score", };
+            table.Controls.Add(label, 0, 0);
 
         }
 
@@ -36,11 +34,9 @@ namespace View
             
 
             table.RowStyles.Add(newRow);
-            Label newPlayer = new Label() { Text = newPlayerName, };
-            Label newScore = new Label() { Text = "" + 0, };
+            Label newPlayerInfo = new Label() { Text = newPlayerName + ": 0"};
 
-            table.Controls.Add(newPlayer);
-            table.Controls.Add(newScore, 1, table.RowCount);
+            table.Controls.Add(newPlayerInfo);
 
             ResizeRows();
 

@@ -51,7 +51,7 @@ namespace View
             this.table.Name = "table";
             this.table.RowCount = 1;
             this.table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.table.Size = new System.Drawing.Size(565, 310);
+            this.table.Size = new System.Drawing.Size(307, 379);
             this.table.TabIndex = 0;
             // 
             // menu
@@ -61,7 +61,7 @@ namespace View
             this.playersToolStripMenuItem});
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(565, 28);
+            this.menu.Size = new System.Drawing.Size(307, 28);
             this.menu.TabIndex = 1;
             this.menu.Text = "menuStrip1";
             // 
@@ -92,7 +92,7 @@ namespace View
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(565, 338);
+            this.ClientSize = new System.Drawing.Size(307, 407);
             this.Controls.Add(this.table);
             this.Controls.Add(this.menu);
             this.Name = "ScoreboardForm";
